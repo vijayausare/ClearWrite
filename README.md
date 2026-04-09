@@ -1,66 +1,60 @@
 # 📝 ClearWrite
 
-A lightning-fast browser extension that polishes your writing in seconds. Select any text, choose your style, and let Groq's high-performance LLM inference handle the rest.
+A lightning-fast Chrome extension that instantly upgrades your writing. Select any text, pick a style, and let the **Llama 3** model (via Groq) handle the rest.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-* **Instant Correction:** Uses Groq’s LPU™ Inference Engine for near-instantaneous results.
-* **Dynamic Formatting:** Choose between different tones or styles before applying changes.
-* **Seamless Integration:** Directly replaces selected text with the polished version.
-* **Privacy-Focused:** Only processes the text you explicitly select.
+* **⚡ Real-Time Speed:** Optimized for instant text generation—no waiting for "thinking" icons.
+* **🧠 6 Transformation Modes:** Beyond just grammar, it can change your entire tone or simplify your thoughts.
+* **🖱️ On-Demand Processing:** Only runs when you click the "✦ Correct" button, keeping your browsing clean and saving API usage.
+* **🔄 Auto-Replace:** Seamlessly updates your text directly in the text field you're using.
 
 ---
 
 ## 🛠️ Installation
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/YOUR_USERNAME/groq-grammar-extension.git
-cd groq-grammar-extension
-```
-
-### 2. Configure your API Key
-1. Get your API key from the [Groq Console](https://console.groq.com/).
-2. Open your configuration file and add your key:
-   ```javascript
-   const GROQ_API_KEY = 'your_key_here';
-   ```
-
-### 3. Load into Browser
-1. Open Chrome/Edge and navigate to `chrome://extensions/`.
-2. Toggle **Developer mode** (top right).
-3. Click **Load unpacked** and select the extension folder.
+1.  **Download:** Unzip the extension files into a folder.
+2.  **Open Extensions:** Navigate to `chrome://extensions/` in Chrome.
+3.  **Developer Mode:** Switch on **Developer mode** in the top-right corner.
+4.  **Load:** Click **Load unpacked** and select your folder.
+5.  **API Key:** Click the extension icon in your bar, paste your **Groq API Key**, and save.
 
 ---
 
 ## 📖 How to Use
 
-1.  **Highlight** any text you’ve written in your browser.
-2.  **Select the proper option** for formatting (e.g., Professional, Casual, or Concise) from the extension menu.
-3.  **Review** the corrected text as it is automatically inserted back into your text field.
+1.  **Highlight** text in any input field (Gmail, Twitter, Discord, etc.).
+2.  **Click the ✦ button** that floats above your selection.
+3.  **Choose your mode** from the menu:
+
+| Option | Effect |
+| :--- | :--- |
+| **✦ Fix Grammar** | Fixes typos, grammar, and punctuation. |
+| **🤝 Make Polite** | Softens the tone for a friendlier message. |
+| **💡 Make Clear** | Removes jargon and simplifies sentences. |
+| **👔 Make Formal** | Polishes text for professional emails. |
+| **😊 Make Casual** | Relaxes the tone for chats or social media. |
+| **✂️ Shorten** | Gets straight to the point. |
+
+4.  **Done!** The selection is replaced instantly with the new version.
 
 ---
 
-## ⚙️ Tech Stack
+## ⚙️ Technical Details
 
-* **LLM Inference:** [Groq Cloud](https://groq.com/)
-* **Model:** `llama-3.1-8b-instant` (Optimized for speed)
-* **Frontend:** HTML5, CSS3, JavaScript (Manifest V3)
-
----
-
-## 🤝 Contributing
-
-Contributions make the open-source community an amazing place to learn and create. 
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+* **Backend:** [Groq Cloud API](https://groq.com/groqcloud)
+* **Intelligence:** `llama-3.3-70b` (or your chosen model)
+* **Environment:** Chrome Extension Manifest V3
+* **Performance:** Focused on low-latency response and minimal background resource usage.
 
 ---
 
-**Built with ⚡ by Vijay A**
+## 🔒 Privacy
+
+This extension only sends text to the Groq API when you **explicitly click** a transformation button. It does not track your typing or store your data.
+
+---
+
+**Developed with ⚡ by Vijay A**
