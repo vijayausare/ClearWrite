@@ -1,7 +1,3 @@
-Got it! I've updated the "How to Use" section to reflect the formatting options and the automatic insertion process. Here is the revised, sleek README for your project.
-
----
-
 # 📝 Groq Grammar Guard
 
 A lightning-fast browser extension that polishes your writing in seconds. Select any text, choose your style, and let Groq's high-performance LLM inference handle the rest.
