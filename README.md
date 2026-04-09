@@ -1,4 +1,4 @@
-# 📝 Groq Grammar Guard
+# 📝 ClearWrite
 
 A lightning-fast browser extension that polishes your writing in seconds. Select any text, choose your style, and let Groq's high-performance LLM inference handle the rest.
 
