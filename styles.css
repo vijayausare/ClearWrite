@@ -1,0 +1,133 @@
+/* Grammar Fixer — floating AI rewrite menu */
+
+#gf-menu {
+  all: initial;
+  position: absolute;
+  z-index: 2147483647;
+  width: 264px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.08);
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transform: translateY(-100%) translateY(-10px);
+  transition: opacity 0.15s, transform 0.15s;
+  opacity: 1;
+  pointer-events: all;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+#gf-menu.gf-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100%) translateY(-6px);
+}
+
+/* Small arrow pointing down */
+#gf-menu::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 6px;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.08));
+}
+
+.gf-menu-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #999;
+  padding: 2px 4px 8px;
+  box-sizing: border-box;
+}
+
+.gf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.gf-chip {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 4px 7px;
+  border-radius: 10px;
+  background: #f5f5f7;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.1s;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.gf-chip:hover {
+  background: #e8e8f0;
+  transform: translateY(-1px);
+}
+
+.gf-chip:active {
+  transform: translateY(0);
+  background: #dcdcec;
+}
+
+.gf-chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.gf-chip-icon {
+  font-size: 16px;
+  line-height: 1;
+  display: block;
+}
+
+.gf-chip-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+  display: block;
+}
+
+/* Status bar */
+.gf-status {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+  min-height: 0;
+  padding: 0 4px;
+  transition: all 0.15s;
+  overflow: hidden;
+  max-height: 0;
+  box-sizing: border-box;
+}
+
+.gf-status:not(:empty) {
+  max-height: 32px;
+  padding: 4px 4px 2px;
+}
+
+.gf-status.loading {
+  color: #555;
+}
+
+.gf-status.success {
+  color: #14532d;
+  font-weight: 600;
+}
+
+.gf-status.error {
+  color: #7f1d1d;
+}
